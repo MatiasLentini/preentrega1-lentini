@@ -9,14 +9,14 @@ alert("Bienvenido al simulador de plazo fijo!\nPresione Enter para continuar.")
 do {
     let monto = Number(prompt("Ingrese el monto a colocar:"))
     //bucle hasta ingresar valor numerico
-    while (monto == "" || isNaN(monto)) {
+    while (monto == "" || monto <=0 || isNaN(monto)) {
         monto = Number(prompt("Por favor, ingrese un valor numerico:"))
     }
     //Si el monto es menor a 100.000 tiene un interes normal
     if (monto < 100000) {
         let tiempo = Number(prompt("Seleccione el plazo deseado: \n1 - 30 días. \n2 - 60 días. \n3 - 90 días."))
         //bucle hasta ingresar el valor numerico de una de las opciones
-        while (tiempo == "" || tiempo >= 4 || isNaN(tiempo)) {
+        while (tiempo == "" || tiempo >= 4 || tiempo <=0 ||isNaN(tiempo)) {
             tiempo = Number(prompt("Error! Seleccione la opción correcta para el plazo deseado: \n1 - 30 días. \n2 - 60 días. \n3 - 90 días."))
         }
         switch (tiempo) {
@@ -36,7 +36,7 @@ do {
         alert("Usted ingresó un monto superior a $100.000! La tasa de interés será mayor.")
         let tiempo = Number(prompt("Seleccione el plazo deseado: \n1 - 30 días. \n2 - 60 días. \n3 - 90 días."))
         //bucle hasta ingresar el valor numerico de una de las opciones
-        while (tiempo == "" || tiempo >= 4 || isNaN(tiempo)) {
+        while (tiempo == "" || tiempo >= 4 || tiempo <=0 || isNaN(tiempo)) {
             tiempo = Number(prompt("Error! Seleccione la opción correcta para el plazo deseado: \n1 - 30 días. \n2 - 60 días. \n3 - 90 días."))
         }
         switch (tiempo) {
